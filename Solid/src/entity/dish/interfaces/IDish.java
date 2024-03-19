@@ -1,4 +1,4 @@
-package entity.dish;
+package entity.dish.interfaces;
 
 import entity.ingredient.Ingredient;
 

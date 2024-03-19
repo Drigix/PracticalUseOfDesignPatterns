@@ -1,16 +1,18 @@
-import entity.DishOrder;
-import entity.DishOrderType;
+import entity.order.DishOrder;
+import enums.order.enums.DishOrderType;
 import entity.customer.Address;
-import entity.dish.DishType;
-import entity.dish.IDish;
-import entity.dish.factory.DishFactory;
+import entity.dish.interfaces.IDish;
+import entity.worker.interfaces.IChef;
+import entity.worker.interfaces.ICourier;
+import entity.worker.interfaces.IWaiter;
+import factory.DishFactory;
 import entity.worker.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static entity.dish.DishType.CHICKEN_BROTH_WITH_PASTA;
-import static entity.dish.DishType.TOMATO_SOUP_WITH_RICE;
+import static enums.dish.enums.DishType.CHICKEN_BROTH_WITH_PASTA;
+import static enums.dish.enums.DishType.TOMATO_SOUP_WITH_RICE;
 
 public class Test {
 	public static void main(String[] args) {

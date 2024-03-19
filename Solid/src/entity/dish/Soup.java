@@ -1,6 +1,8 @@
 package entity.dish;
 
 
+import enums.dish.enums.DishType;
+import entity.dish.interfaces.IDish;
 import entity.ingredient.Ingredient;
 
 import java.util.ArrayList;
@@ -48,44 +50,4 @@ public class Soup implements IDish {
 	public void setName(DishType type) {
 		name = type.getDishTypeName();
 	}
-
-//	@Override
-//	public void prepare(DishType type) {
-//		setName(type);
-//		addSpecialIngretients(type);
-//		System.out.println("Preparing soup with ingredients: "+ ingredients);
-//		System.out.println("I pour water into the pot");
-//		System.out.println("I add a stock cube");
-//		for(Ingredient ingredient: ingredients) {
-//			if(ingredient instanceof Carrot marchewka) {
-//				marchewka.obierz();
-//				marchewka.pokroj();
-//			}
-//			if(ingredient instanceof Pasta makaron) {
-//				makaron.cook();
-//			}
-//			if(ingredient instanceof Rice rice) {
-//				rice.cook();
-//			}
-//		}
-//	}
-//
-//	@Override
-//	public void serve() {
-//		System.out.println("Serving dinner");
-//		System.out.println("I serve "+ name + " to the table");
-//	}
-//
-//	@Override
-//	public void delivery(Address address) {
-//		System.out.println("Delivery dish");
-//		System.out.println("I delivery "+ name + " to address " + address.getFullAdress());
-//	}
-//
-//	private void addSpecialIngretients(DishType type) {
-//		switch (type) {
-//			case CHICKEN_BROTH_WITH_RICE -> addIngredient(new Rice());
-//			case CHICKEN_BROTH_WITH_PASTA -> addIngredient(new Pasta());
-//		}
-//	}
 }

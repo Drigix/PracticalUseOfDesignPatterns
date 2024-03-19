@@ -1,6 +1,6 @@
-package entity.worker;
+package entity.worker.interfaces;
 
-import entity.DishOrder;
+import entity.order.DishOrder;
 import entity.customer.Address;
 
 public interface ICourier {

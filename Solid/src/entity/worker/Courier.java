@@ -1,7 +1,8 @@
 package entity.worker;
 
-import entity.DishOrder;
+import entity.order.DishOrder;
 import entity.customer.Address;
+import entity.worker.interfaces.ICourier;
 
 public class Courier implements ICourier {
 

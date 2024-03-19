@@ -1,4 +1,4 @@
-package entity.dish;
+package enums.dish.enums;
 
 public enum DishType {
     CHICKEN_BROTH_WITH_PASTA("chicken broth with pasta"),

@@ -1,16 +1,16 @@
 package entity.worker;
 
-import entity.*;
-import entity.dish.DishType;
-import entity.dish.IDish;
-import entity.ingredient.Carrot;
-import entity.ingredient.Ingredient;
-import entity.ingredient.Pasta;
-import entity.ingredient.Rice;
+import enums.dish.enums.DishType;
+import entity.dish.interfaces.IDish;
+import entity.ingredient.*;
+import entity.order.DishOrder;
+import entity.worker.interfaces.IChef;
+import factory.IngredientPrepareFactory;
+import strategy.IIngredientPrepare;
 
 import java.util.List;
 
-import static entity.dish.DishType.CHICKEN_BROTH_WITH_PASTA;
+import static enums.dish.enums.DishType.CHICKEN_BROTH_WITH_PASTA;
 
 public class Chef implements IChef {
 
@@ -47,17 +47,8 @@ public class Chef implements IChef {
 
     private void prepareIngredients(List<Ingredient> ingredients) {
         for(Ingredient ingredient: ingredients) {
-            if(ingredient instanceof Carrot carrot) {
-                carrot.peeling();
-                carrot.cutting();
-            }
-            if(ingredient instanceof Pasta pasta) {
-                pasta.cook();
-            }
-            if(ingredient instanceof Rice rice) {
-                rice.cook();
-            }
+            IIngredientPrepare ingredientPrepare = IngredientPrepareFactory.create(ingredient);
+            ingredientPrepare.prepare(ingredient);
         }
-    };
-
+    }
 }

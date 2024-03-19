@@ -1,7 +1,8 @@
 package entity.worker;
 
-import entity.DishOrder;
-import entity.dish.IDish;
+import entity.order.DishOrder;
+import entity.dish.interfaces.IDish;
+import entity.worker.interfaces.IWaiter;
 
 public class Waiter implements IWaiter {
 

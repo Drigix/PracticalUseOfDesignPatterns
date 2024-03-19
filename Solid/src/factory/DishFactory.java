@@ -1,7 +1,7 @@
-package entity.dish.factory;
+package factory;
 
-import entity.dish.DishType;
-import entity.dish.IDish;
+import enums.dish.enums.DishType;
+import entity.dish.interfaces.IDish;
 import entity.dish.Soup;
 import entity.dish.TomatoSoup;
 import entity.ingredient.Carrot;
