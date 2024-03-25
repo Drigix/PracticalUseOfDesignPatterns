@@ -1,5 +1,5 @@
 import entity.order.DishOrder;
-import enums.order.enums.DishOrderType;
+import enums.order.DishOrderType;
 import entity.customer.Address;
 import entity.dish.interfaces.IDish;
 import entity.worker.interfaces.IChef;
@@ -11,8 +11,8 @@ import entity.worker.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static enums.dish.enums.DishType.CHICKEN_BROTH_WITH_PASTA;
-import static enums.dish.enums.DishType.TOMATO_SOUP_WITH_RICE;
+import static enums.dish.DishType.CHICKEN_BROTH_WITH_PASTA;
+import static enums.dish.DishType.TOMATO_SOUP_WITH_RICE;
 
 public class Test {
 	public static void main(String[] args) {

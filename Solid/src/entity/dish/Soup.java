@@ -1,7 +1,7 @@
 package entity.dish;
 
 
-import enums.dish.enums.DishType;
+import enums.dish.DishType;
 import entity.dish.interfaces.IDish;
 import entity.ingredient.Ingredient;
 

@@ -1,5 +1,7 @@
 package entity.ingredient;
 
+import enums.ingredient.IngridientType;
+
 public class Pasta extends Ingredient {
 
 	@Override
@@ -10,5 +12,9 @@ public class Pasta extends Ingredient {
 	public void cook() {
 		System.out.println("Cook pasta");
 	}
-	
+
+	@Override
+	public IngridientType getIngredientType() {
+		return IngridientType.PASTA;
+	}
 }

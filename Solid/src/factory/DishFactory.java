@@ -1,6 +1,6 @@
 package factory;
 
-import enums.dish.enums.DishType;
+import enums.dish.DishType;
 import entity.dish.interfaces.IDish;
 import entity.dish.Soup;
 import entity.dish.TomatoSoup;

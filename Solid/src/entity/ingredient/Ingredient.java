@@ -1,6 +1,10 @@
 package entity.ingredient;
 
-public class Ingredient {
+import enums.ingredient.IngridientType;
+
+public abstract class Ingredient {
 	String name;
 	int amount;
+
+	public abstract IngridientType getIngredientType();
 }

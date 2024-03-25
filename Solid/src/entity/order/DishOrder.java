@@ -1,7 +1,7 @@
 package entity.order;
 
 import entity.dish.interfaces.IDish;
-import enums.order.enums.DishOrderType;
+import enums.order.DishOrderType;
 
 import java.util.List;
 

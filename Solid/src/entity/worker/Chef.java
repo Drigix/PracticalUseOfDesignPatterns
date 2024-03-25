@@ -1,6 +1,6 @@
 package entity.worker;
 
-import enums.dish.enums.DishType;
+import enums.dish.DishType;
 import entity.dish.interfaces.IDish;
 import entity.ingredient.*;
 import entity.order.DishOrder;
@@ -10,7 +10,7 @@ import strategy.IIngredientPrepare;
 
 import java.util.List;
 
-import static enums.dish.enums.DishType.CHICKEN_BROTH_WITH_PASTA;
+import static enums.dish.DishType.CHICKEN_BROTH_WITH_PASTA;
 
 public class Chef implements IChef {
 
