@@ -3,11 +3,14 @@ package org.example.entity.cars;
 import org.example.enums.CarType;
 import org.example.factory.CarFactory;
 
-public class Service {
-	public ICar prepareCar(CarType carType) {
-		ICar car = CarFactory.createCar(carType);
+public abstract class Service {
+	public ICar prepareCar() {
+//		ICar car = CarFactory.createCar(carType);
+		ICar car = create();
 		car.checkFluids();
 		car.fuelUp();
 		return car;
 	}
+
+	abstract ICar create();
 }
