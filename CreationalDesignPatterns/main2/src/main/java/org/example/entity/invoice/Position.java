@@ -3,8 +3,6 @@ package org.example.entity.invoice;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
 public class Position {
 
 	private String description;
@@ -13,6 +11,13 @@ public class Position {
 	private int vat;
 	private String ku;
 
+	private Position(String description, int amount, double price, int vat, String ku) {
+		this.description = description;
+		this.amount = amount;
+		this.price = price;
+		this.vat = vat;
+		this.ku = ku;
+	}
 
 	public static class Builder {
 

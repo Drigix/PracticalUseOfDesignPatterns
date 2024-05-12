@@ -8,6 +8,8 @@ public class AbacusSingleton {
         return abacusSingleton;
     }
 
+    private AbacusSingleton() {}
+
     public void count1() {
         System.out.println("Do count1");
     }
