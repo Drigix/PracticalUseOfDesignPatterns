@@ -8,4 +8,5 @@ public interface IComponent {
     List<IComponent> getElements();
     int countElements();
     void writeInfo();
+    IComponentIterator getIterator();
 }

@@ -5,14 +5,14 @@ import lombok.Setter;
 import org.example.interfaces.IComponent;
 import org.example.interfaces.IComponentIterator;
 
-import java.util.List;
 
 @Getter
 @Setter
-public class ComponentIterator  implements IComponentIterator {
+public class ComponentIterator implements IComponentIterator {
 
     private IComponent component;
     private Integer position = 0;
+    private IComponent pointerChild;
 
     public ComponentIterator(IComponent component) {
         this.component = component;
@@ -20,14 +20,26 @@ public class ComponentIterator  implements IComponentIterator {
 
     @Override
     public boolean hasNext() {
-        return position < component.countElements();
+        return position + 1 < component.getElements().size();
     }
 
     @Override
     public IComponent getNext() {
-        List<IComponent> components = component.getElements();
-        IComponent nextComponent = components.get(position);
-        position ++;
-        return nextComponent;
+        if (component.getElements().isEmpty()) return null;
+
+        if (pointerChild == null) {
+            position = 0;
+            pointerChild = component.getElements().get(position);
+            return pointerChild;
+        }
+
+        IComponent childComponent = pointerChild.getIterator().getNext();
+        if (childComponent == null) {
+            if (!hasNext()) return null;
+            position++;
+            pointerChild = component.getElements().get(position);
+            return pointerChild;
+        }
+        return childComponent;
     }
 }

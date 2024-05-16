@@ -19,6 +19,7 @@ public class Main {
         s.addElement(new Car("Ford"));
 //        s.writeInfo();
         ComponentIterator componentIterator = new ComponentIterator(s);
+        s.writeInfo();
         while(componentIterator.hasNext()) {
             componentIterator.getNext().writeInfo();
         }

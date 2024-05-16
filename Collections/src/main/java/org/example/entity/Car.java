@@ -3,6 +3,8 @@ package org.example.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.interfaces.IComponent;
+import org.example.interfaces.IComponentIterator;
+import org.example.services.ComponentIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +15,7 @@ public class Car implements IComponent {
 
     private String name;
     private List<IComponent> children;
+    private IComponentIterator iterator;
 
     public Car(String name) {
         this.name = name;
@@ -33,7 +36,7 @@ public class Car implements IComponent {
     }
     @Override
     public int countElements() {
-        return children.size();
+        return children.size() + 1;
     }
 
     @Override
@@ -42,5 +45,13 @@ public class Car implements IComponent {
 //            child.writeInfo();
 //        }
         System.out.println(name + " " + countElements());
+    }
+
+    @Override
+    public IComponentIterator getIterator() {
+        if(iterator == null) {
+            iterator = new ComponentIterator(this);
+        }
+        return iterator;
     }
 }
