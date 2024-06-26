@@ -4,7 +4,10 @@ import org.example.entity.ABW;
 import org.example.entity.MainPoliceDepartment;
 import org.example.entity.PoliceDepartment;
 import org.example.entity.PoliceDistrict;
+import org.example.interfaces.IVisitor;
 import org.example.interfaces.PoliceUnit;
+import org.example.services.visitor.AreaVisitor;
+import org.example.services.visitor.BossVisitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,8 +42,9 @@ public class PoliceTest {
                 System.out.println("ABW: Not to write!");
             }
         }
+        IVisitor visitor = new BossVisitor();
+        visitor.visit(units);
     }
-
     public static void writeSurface(List<PoliceUnit> units) {
         System.out.println("Surface of the units");
         for(PoliceUnit unit: units) {
@@ -57,5 +61,7 @@ public class PoliceTest {
                 System.out.println("ABW: All country");
             }
         }
+        IVisitor visitor = new AreaVisitor();
+        visitor.visit(units);
     }
 }

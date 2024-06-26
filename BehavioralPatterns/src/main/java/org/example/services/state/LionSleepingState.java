@@ -2,7 +2,7 @@ package org.example.services.state;
 
 import org.example.enums.LionActivities;
 
-public class LionSleepingState implements State{
+public class LionSleepingState implements State {
 
     private LionStateContext context;
 
